@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             x:Class="Tarea_2_1.DetallePaisPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="DarkSlateGreyColor">#2F4F4F</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="{Binding Nombre}" FontSize="Large" />
+        <Image Source="{Binding Bandera}" WidthRequest="50" HeightRequest="50" />
+        <Label Text="Población:" TextColor="Black"/>
+        <Label Text="{Binding  Poblacion}" />
+        <Label Text="Region:" TextColor="Black"/>
+        <Label Text="{Binding Region}" />
+        <Label Text="Subregion:" TextColor="Black"/>
+        <Label Text="{Binding Subregion}" />
+        <Label Text="Idiomas:" TextColor="Black"/>
+        <Label Text="{Binding IdiomasAsString}" />
+        <Label Text="Monedas:" TextColor="Black"/>
+        <Label Text="{Binding MonedasAsString}" />
+        <maps:Map x:Name="PaisMap" HeightRequest="300" />
+    </StackLayout>
+</ContentPage>
